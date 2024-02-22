@@ -1,5 +1,15 @@
 def ubah_huruf(sentence):
     pattern = ""
+    geser=10
+    for s in sentence:
+        # get unicode (65-90)
+        newcode=ord(s)+geser
+        if s==" ":
+            pattern +=" "
+        # return unicode to alphabet
+        elif newcode>90:
+            pattern +=chr(newcode-26)
+        else: pattern +=chr(newcode)
     return pattern
 
 if __name__ == '__main__':
