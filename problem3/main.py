@@ -1,5 +1,16 @@
 def cetak_table_perkalian(number):
     pattern = ""
+    for i in range(1,number+1):
+        for j in range(1,number+1):
+            if j== 1:
+                #column paling kiri dikasih spasi
+                strnum=" "+str(i*j)+" "
+            elif j== number:
+                #column paling kanan tanpa spasi
+                strnum=str(i*j)+""
+            else:strnum=str(i*j)+" "
+            pattern +=strnum  
+        pattern +="\n"
     return pattern
 
 if __name__ == '__main__':
